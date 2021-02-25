@@ -1,0 +1,16 @@
+title: To start with
+description: To start with~
+template:
+  repo: to-start-with-template
+  name: to-start-with
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
